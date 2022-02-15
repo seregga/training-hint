@@ -646,6 +646,10 @@ go();
 
 
 // ----------------split splice join-----------------
+// Метод split('-') разбивает объект String на массив строк путём разделения строки указанной подстрокой.
+// Метод join('-') объединяет все элементы массива (или массивоподобного объекта) в строку.
+// Метод splice() изменяет содержимое массива, удаляя существующие элементы и/или добавляя новые.
+
 // function testString(string) {
 //     let c = string.split('');
 //     const a = c[0].toUpperCase();
@@ -690,7 +694,7 @@ go();
 // ({ a, b, ...rest } = { a: 1, b: 2, c: 3, d: 4 });
 // console.log(a); // 1
 // console.log(b); // 2
-// console.log(rest); // [c: 3, d: 4]
+// console.log(rest); // {c: 3, d: 4}
 // console.log(rest.c); // 3
 // // ES2016 - ещё не реализовано Firefox 47a01
 
@@ -775,8 +779,9 @@ go();
 
 // const fruits = { "rise": 30, "banana": 10, "pineapple": 20, "watermelon": 100 };
 // const abjArr = Object.entries(fruits);
-// abjArr.forEach(([key, value]) => {
-//     console.table(key, value);
+// console.log(abjArr);
+// abjArr.forEach(([k, v]) => {
+//     console.log(k, v);
 // });
 // for (let [key, value] of Object.entries(fruits)) {
 //     console.log(`${key}:${value}`);
@@ -787,25 +792,70 @@ go();
 //================ конец Object.entries объект в массив циклом for in , Object.value , Object.keys
 
 
+// ==============замыкание (два примера) раскоментировать в index.html <div class="inputs">
 
-
-
-
-// --------------------подготовка к собеседованию----------------------------------
-// --------------------подготовка к собеседованию----------------------------------
-// --------------------подготовка к собеседованию----------------------------------
-// --------------------подготовка к собеседованию----------------------------------
-
-
-// /////////////////////////////////////////////////
-// const numbers = [1, 2, 3, 4, 5, 6];
-// console.log(separateArray(numbers));
-// // должен вернуть { even: [2, 4, 6], odd: [1, 3, 5] }
-
-// function separateArray(array) {
-//     return { ...array }
+// function showHelp(help) {
+//     document.getElementById('help').innerHTML = help;
 // }
 
+// function makeHelpCallback(help) {
+//     return function () {
+//         showHelp(help);
+//     };
+// }
 
+// function setupHelp() {
+//     var helpText = [
+//         { 'id': 'email', 'help': 'Ваш адрес e-mail' },
+//         { 'id': 'name', 'help': 'Ваше полное имя' },
+//         { 'id': 'age', 'help': 'Ваш возраст (Вам должно быть больше 16)' }
+//     ];
+
+//     for (var i = 0; i < helpText.length; i++) {
+//         var item = helpText[i];
+//         document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
+
+//     }
+// }
+// setupHelp();
+
+//-----------------------
+
+// function makeAdder(x) {
+//     console.log(x);
+//     return function (y) {
+//         return x + y;
+//     };
+// };
+
+// var add5 = makeAdder(5);
+// var add10 = makeAdder(10);
+// add5(2)
+// add10(2)
+// console.log(add5(2));  // 7
+// console.log(add10(2)); // 12
+
+// ==============конец замыкание
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+// function n1(num) {
+//     let arr1 = [];
+//     for (let i = 0; i < num.length; i++) {
+//         arr1[i] = num[i] * 2;
+//     }
+//     // let arr2 = num.reduce((pre, curr) => pre + curr)
+//     arr1 = arr1.join('-');
+//     // arr2 = arr1.split('-');
+//     console.log(arr1);
+//     document.getElementById('help').textContent = arr1;
+//     // console.log(arr2);
+// }
+// n1(numbers)
 
 
