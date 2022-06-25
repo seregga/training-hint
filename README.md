@@ -1,2 +1,2 @@
 # training-hint
-training-hint for me !
+training-hint for me !!

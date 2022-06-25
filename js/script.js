@@ -1,3 +1,11 @@
+// ----------------- логарифм и возведение в степень 
+
+// console.log(Math.log(25) / Math.log(5));//-логарифм из 25 по основанию 5 // =2
+// console.log(Math.pow(5, 2));//возведение 5 во 2 степень // =25
+// let a = arr.join(',');
+
+// ----------------- конец логарифм и возведение в степень 
+
 //--------------------------class
 // class car {
 //    shop = 'rodeo';
@@ -12,6 +20,56 @@
 // console.log(meren);
 // console.log(opel);
 //--------------------------конец class
+
+
+//-----------------------------расширение классов
+
+// class Transport {
+    //     constructor(type, price, vendor, model) {
+    //         this.type = type;
+    //         this.price = price;
+    //         this.vendor = vendor;
+    //         this.model = model;
+    //     }
+    
+    //     getInfo() {
+    //         return `${this.vendor}, ${this.model}`;
+    //     }
+    
+    //     getPrice() {
+    //         return this.price.toLocaleString('ru-RU') + ' ₽';
+    //     }
+    // }
+    
+    // class Car extends Transport {
+    //     constructor(type, vendor, model, doorsCount, price) {
+    //         super(type, price, vendor, model);
+    //         this.doorsCount = doorsCount;
+    //         getInfo.bind(this);
+    //     }
+    //     getDoorsCount() {
+    //         return `Кол-во дверей: ${this.doorsCount}`;
+    //     }
+    // }
+    
+    // class Bike extends Transport {
+    //     constructor(type, vendor, model, maxSpeed, price) {
+    //         super('bike', price, vendor, model);
+    //         this.maxSpeed = maxSpeed;
+    //     }
+    
+    //     getMaxSpeed() {
+    //         return `Макс. скорость: ${this.maxSpeed} км/ч`;
+    //     }
+    // }
+    
+    // const bike = new Bike('Cross', 'Easy-Moto', 'Suzuki', 270, 500)
+    // console.log(bike);
+    // console.log(bike.getMaxSpeed());
+    // console.log(bike.getInfo());
+    // console.log(bike.getPrice());
+
+//-----------------------------конец расширение классов
 
 // const b = {};
 // let c;
@@ -201,7 +259,9 @@ go();
 
 // console.log(fls.includes('лан', 3));
 // console.log(fls.toUpperCase());
-// console.log(fls.slice(3, 6));
+// let t = fls.slice(3, 6)
+// console.log(fls);
+// console.log(t);
 
 // let text = `привет я ${fls}`;
 // console.log(text);
@@ -227,9 +287,20 @@ go();
 // console.log(newArr);
 // console.log(arr);
 
-// let arr = 'Петя, Аня,Коля';
-// newArr = arr.split(',');
-// console.log(newArr);
+// let str = 'Петя Аня';
+
+// const strPetya = str.split(''); 
+// let t = strPetya.splice(0, 5).join('')
+// const t2 = strPetya.join('')
+// const strPetya = str.split('',4).join(''); 
+// const strAnya = str.split('').splice(5,3).join(''); 
+// const strAnya = str.split('').reverse().join('').split('',3).reverse().join(''); 
+// console.log(str); 
+// console.log(strPetya); 
+// console.log(strAnya); 
+// console.log(t); 
+// console.log(t2); 
+
 
 
 // let arr = ['Петя', 'Катя', 'Вася'];
@@ -706,6 +777,13 @@ go();
 // }
 // testRest(...ant)
 
+//result.even = [
+    // { 'name': 'vasa' }, 
+    // [5, 6, 7], 
+    // 99
+// ]
+// console.log(...result.even[1]); // 5 6 7
+
 //----------------/ конец Деструктуризация-------------
 
 //---------------отключаем событие правой кнопки мыши
@@ -836,6 +914,14 @@ go();
 // console.log(add10(2)); // 12
 
 // ==============конец замыкание
+
+// ============== regexp регулярные выражения
+
+// const regexp = /Сергей\./;
+// const str = "Привет, меня зовут Сергей.!";
+// const result = str.match(regexp);// ищем в str Сергей. 
+// console.log(result); // ['Сергей.', index: 19, input: 'Привет, меня зовут Сергей.!', groups: undefined]
+// // ==============конец regexp регулярные выражения
 
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
